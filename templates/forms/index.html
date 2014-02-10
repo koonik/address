@@ -1,0 +1,13 @@
+
+
+{% if address_list %}
+    <ul>
+    {% for address in address_list %}
+        <li>{{ address.last_name }} {{ address.first_name }}</li>
+    {% endfor %}
+
+    <a href="{% url 'address' %}">Post address?</a>
+    </ul>
+{% else %}
+    <p>No addresses are available.</p>
+{% endif %}
